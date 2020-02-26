@@ -1,5 +1,6 @@
 from django.db import models
 from category.models import Category
+from datetime import datetime, date
 
 # Create your models here.
 
@@ -13,8 +14,8 @@ class Product(models.Model):
     # startingBidPrice = models.DecimalField(max_digits=9, decimal_places=2)
     # highestBidPrice = models.DecimalField(max_digits=9, decimal_places=2)
     # currentBidPrice =  models.DecimalField(max_digits=9, decimal_places=2)
-    # auctionEndDate = models.DateTimeField(auto_now_add=False, auto_now=False)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    auctionEndDate = models.DateTimeField(auto_now_add=False, auto_now=False, blank=True)
+    # timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, blank=True)
 
     def __str__(self):
         return self.name
