@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-
+<h1>Shopping Cart</h1> <h4>Go to  payment with Checkout below</h4>
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
 {% block content %}
+<div class="container" > <h3> You have  {{ product_count }} item in your shopping cart!</h3></div>
 <div class="row row-flex">
     {% for item in cart_items %}
     
@@ -14,6 +15,8 @@
         
         <div class="caption">
             <h3>{{ item.product.name }}</h3>
+            <h4>{{ item.product.category }}</h4>
+            <h5>{{ product.category.description }}</h5>
             <p class="product-description">{{ item.product.description }}</p>
             <p class="glyphicon glyphicon-euro">{{ item.product.price }}</p>
             <p>    
@@ -27,7 +30,7 @@
                             <div class="input-group-addon">{{item.quantity}}</div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Amend</button>
                 </form>
             </p>
         </div>
@@ -36,8 +39,8 @@
 </div>
 <div class="row">
     <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    <h4><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><strong> {{ total }}</strong></h4>
+    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
 </div>
 
 {% endblock %}

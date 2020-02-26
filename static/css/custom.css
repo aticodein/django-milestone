@@ -21,8 +21,20 @@ footer {
     padding-top: 20px;
 }
 
-.navbar {
-    background-color: seagreen;
+.navbar-default {
+    border-color: gray;
+    background-color: #999999;
+    border-width: 0.2em;
+    border-radius: 15px;
+}
+
+.navbar-collaps {
+    background-color: gray ;
+}
+
+.container-fluid {
+    width: 80%;
+    background-color: lightgrey ;
 }
 
 .display {
@@ -49,6 +61,12 @@ footer {
     width: 150px;
     height: 150px;
     margin: 0 auto;
+    padding: 15px;
+}
+
+.panel-default {
+    margin: 2px;
+    padding: 5px;
 }
 
 caption p {
