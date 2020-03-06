@@ -38,7 +38,7 @@ footer {
 }
 
 .display {
-    margin-top: 30;
+    margin: 30;
 }
 
 .badge {
@@ -63,6 +63,17 @@ footer {
     margin: 0 auto;
     padding: 15px;
 }
+
+.auction {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
 
 .panel-default {
     margin: 2px;

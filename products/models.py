@@ -17,4 +17,4 @@ class Product(models.Model):
     auctionEndDate = models.DateTimeField(auto_now_add=False, auto_now=False, blank=True)
 
     def __str__(self):
-        return self.name        
+        return self.name     
