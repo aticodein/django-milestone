@@ -32,15 +32,19 @@
                 <p class="product-description">{{ auction.description }}</p>
                 <p class="">You are bidding as: {{ auction.user_name }}</p>
                 <p class="vIntegerfield">You have <bold>{{ auction.number_of_bids }}</bold> bid left!</p>
-                <p class="vIntegerfield">Starting Bid Price: <span class="glyphicon glyphicon-euro" aria-hidden="true">
-                <p>{{ auction.product_name.startingBidPrice }}</p>
                 <p class="">Auction Started: {{ auction.time_starting }}</p>
                 <p class="">Auction Ending: {{ auction.time_ending }}</p>
                 <!--<p class="">{{ auction.product_name.id}}</p>-->
-                <p>Your Bid: <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></p>
-                <form action="/search/" method="get">
-                   <input type="text" name="q">
-                   <button class="btn btn-success" type="submit">Submit Bid</button>
+                <p>Your Bid: <span class="glyphicon glyphicon-euro" aria-hidden="true"> {{ auction.user_bid }}</span></p>
+                <form method="post" action="{% url 'auction' %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input name="user-bid" type="number" min="1" max="999999" class="form-control" placeholder="Please put your bid here">
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning" type="submit">Your Bid</button>
+                        </span>
+                    </div>
+                    <p class="vIntegerfield">Starting Price for Bid: <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ auction.product_name.startingBidPrice }}</p>
                 </form>
             </div>
         </div>
