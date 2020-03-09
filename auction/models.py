@@ -31,4 +31,16 @@ class Bid(models.Model):
     user_bid = models.IntegerField(default='')
 
     def __int__(self):
-        return self.user_bid
+        return self.product_id
+
+"""
+class Profile(models.Model):
+    auction_id = models.ForeignKey(Auction, on_delete=models.CASCADE, related_name='auctions') # 1: which auctions they have bid on,
+    number_of_bids = models.IntegerField() # 2: how many times they have bid on that auction
+    user_bid = models.IntegerField(default='') # 3: their bid price 
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE) # 4: user_id as ForeignKey
+    
+
+    def __int__(self):
+        return self.auction_id
+"""
