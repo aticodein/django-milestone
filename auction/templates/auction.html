@@ -35,17 +35,17 @@
                 <p class="">Auction Started: {{ auction.time_starting }}</p>
                 <p class="">Auction Ending: {{ auction.time_ending }}</p>
                 <!--<p class="">{{ auction.product_name.id}}</p>-->
-                <p>Your Bid: <span class="glyphicon glyphicon-euro" aria-hidden="true"> {{ auction.user_bid }}</span></p>
-                <form method="post" action="{% url 'auction' %}">
+                <form method="POST" action="{% url 'auction' %}" class="AutionForm">
                     {% csrf_token %}
-                    <div class="input-group">
-                        <input name="user-bid" type="number" min="1" max="999999" class="form-control" placeholder="Please put your bid here">
-                        <span class="input-group-btn">
-                            <button class="btn btn-warning" type="submit">Your Bid</button>
-                        </span>
-                    </div>
+                    {{ form }}
+                    <input type="hidden" name="auction_id" value="{{auction.id}}">
+                    <input type="hidden" name="product_id" value="{{auction.product_id.id}}">
+                    <button class="btn btn-warning" type="subbmit">Place your Bid</button>
+                    <p>Your last Bid: <span class="glyphicon glyphicon-euro" aria-hidden="true"> {{  auction.user_id }}</span></p>
+                    <p class="vIntegerfield">You have <bold>{{ auction.number_of_bids }}</bold> bid left!</p>
                     <p class="vIntegerfield">Starting Price for Bid: <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ auction.product_name.startingBidPrice }}</p>
                 </form>
+
             </div>
         </div>
     {% endfor %}

@@ -11,7 +11,6 @@ class Auction(models.Model):
     user_name = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
     product_name = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='products')
-    user_bid = models.IntegerField(default='')
     current_highest_bid = ('highest bid from all users in auction')
     Product.startingBidPrice = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='products')
     product_image = models.ImageField(upload_to='auction.images', default='')
@@ -29,4 +28,7 @@ class Bid(models.Model):
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
     auction_id = models.ForeignKey(Auction, on_delete=models.CASCADE, related_name='auctions')
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, blank=False)
-    user_bid = models.ForeignKey(Auction, on_delete=models.CASCADE)
+    user_bid = models.IntegerField(default='')
+
+    def __int__(self):
+        return self.user_bid

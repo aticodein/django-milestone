@@ -1,13 +1,18 @@
 from django import forms
+from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from products.models import Product
+from auction.models import Auction
+from auction.forms import AuctionUserBidForm
+
 
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = ['name', 'category', 'price', 'auctionEndDate']
+
 
 class UserLoginForm(forms.Form):
     username_or_email = forms.CharField()
