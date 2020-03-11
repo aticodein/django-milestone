@@ -1,12 +1,12 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.http import HttpResponse
 from products.models import Product
 from .models import Auction
 from .models import Bid
 from .forms import AuctionUserBidForm
+from django.contrib.auth.models import User
 # Create your views here.
-
 
 def auction(request):
     auctions = Auction.objects.all()
@@ -18,8 +18,12 @@ def auction(request):
             instance = form.save(commit=False)
             print(form.cleaned_data.get("user_bid")) # delete this line at production
             instance.user_id = request.user
+            user = instance.user_id
+            print(user)
             instance.auction_id = auction
+            print(auction)
             instance.product_id = product
+            print(product) # delete this line at production
             context = {
             'auctions': auctions,
             'form': form
@@ -34,23 +38,21 @@ def auction(request):
         }
     return render(request, "auction.html", context)
 
-def raise_bid(request, bid_id):
-    bid_id = int(bid_id)
+def raise_bid(request, bid_id, user_bid):
+    bid = request.get('raise_bid', {})
+    if id in bid:
+        bid.user_bid[id] =+ int(bid.user_bid[id])
+    else:
+        bid.user_bid[id] = bid.user_bid.get(id)    
     try:
         bid_raise = Bid.objects.get(id = bid_id)
     except Bid.DoesNotExist:
-        return redirect('auction')
+        return redirect(reverse('auction'))
     form = Auction.objects.all(request.POST or None, instance = bid_raise)
     if form.is_valid():
        form.save()
        return redirect('auction')
     return render(request, 'templates/auction.html', {'form': form})
-
-
-
-
-
-
 
 """
 def auction(request):

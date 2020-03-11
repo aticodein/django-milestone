@@ -28,9 +28,8 @@
                 <div class="auction" style="background-image: url('{{ MEDIA_URL }}{{ auction.product_name.image }}')"></div>
                 <h4>Category: {{ auction.product_name.category }}</h4>
                 <p class="">{{ auction.product_name }}</p>
-                <h5>{{ auction.user }}</h5>
                 <p class="product-description">{{ auction.description }}</p>
-                <p class="">You are bidding as: {{ auction.user_name }}</p>
+                <h5 class="">You are bidding as: {{ bid.user }}</h5>
                 <p class="vIntegerfield">You have <bold>{{ auction.number_of_bids }}</bold> bid left!</p>
                 <p class="">Auction Started: {{ auction.time_starting }}</p>
                 <p class="">Auction Ending: {{ auction.time_ending }}</p>
