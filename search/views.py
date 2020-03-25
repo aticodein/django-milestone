@@ -8,5 +8,11 @@ def do_search(request):
     return render(request, "products.html", {"products": products})
 
 def do_search_by_categories(request):
-    categories = Category.objects.filter(name__icontains=request.GET['q'])
-    return render(request, "categories.html", {"categories": categories})
+    category = request.GET.get('category')
+    qs = filter(categories_name=category)
+    context = {
+        'queryset': qs
+    }
+    categories = Category.objects.filter(name__icontains=request.GET['qs'])
+
+    return render(request, "products.html", {"products": categories}, context)

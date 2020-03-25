@@ -3,7 +3,14 @@ from django.db import models
 # Create your models here.
 
 class Category(models.Model):
-    title = models.CharField(max_length=50, default='')
+    CATEGORIES = (
+           ('Magical', 'Magical'),
+           ('Historical', 'Historical'),
+           ('Voodoo', 'Voodoo'),
+           ('Christian', 'Christian'),
+           ('Ancient', 'Ancient')
+       )  
+    title = models.CharField(max_length=50, default='', choices=CATEGORIES)
     description = models.TextField()
 
     def __str__(self):

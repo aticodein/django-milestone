@@ -21,7 +21,7 @@ from auction import urls as urls_auction
 from products.views import all_products
 from auction.views import auction
 from category import urls as urls_category
-from category.views import all_categories
+# from category.views import all_categories, BootstrapFilterView
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
@@ -36,6 +36,7 @@ urlpatterns = [
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^auction/', include(urls_auction)),
+ #   url(r'^$', BootstrapFilterView, name='bootstrap'),
     url(r'^categories/', include(urls_category)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^cart/', include(urls_cart)),
