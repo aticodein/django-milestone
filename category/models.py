@@ -8,6 +8,7 @@ class Category(models.Model):
            ('Historical', 'Historical'),
            ('Voodoo', 'Voodoo'),
            ('Christian', 'Christian'),
+           ('Asian', 'Asian'),
            ('Ancient', 'Ancient')
        )  
     title = models.CharField(max_length=50, default='', choices=CATEGORIES)

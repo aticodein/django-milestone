@@ -4,7 +4,7 @@ from category.models import Category
 
 # Create your views here.
 def do_search(request):
-    products = Product.objects.filter(name__icontains=request.GET['q'])
+    products = Product.objects.filter(name__icontains=request.GET)
     return render(request, "products.html", {"products": products})
 
 def do_search_by_categories(request):
