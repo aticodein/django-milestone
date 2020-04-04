@@ -10,7 +10,7 @@ django-filter==2.0.0
 docutils==0.15.2
 gunicorn==19.10.0
 idna==2.9
-python-dateutil==1.5
+python-dateutil==2.8.1
 jmespath==0.9.4
 Pillow==7.0.0
 psycopg2==2.8.4
