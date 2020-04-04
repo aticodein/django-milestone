@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<h1 style="margin: 30px">All Products</h1>
+<h1 style="margin: 30px">All Precious</h1>
 {% extends 'base.html' %}
 
 {% load static from staticfiles %}
@@ -24,7 +24,7 @@
         <div class="form-row">
             {% csrf_token %}
             <div class="form-group col-md-4">
-                <a class="navbar-brand" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Products</button></a>
+                <a class="navbar-brand" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Precious</button></a>
             </div>
         </div>
     </form>
@@ -32,11 +32,11 @@
 
 <div class="col-xs-12 col-md-6">
     <form method="POST">
-      <div class="form-row">
+      <div style="" class="form-row">
         {% csrf_token %}
-        {{ filter_categories_form }}
+         <p> <label style="background-color:white;">{{  filter_categories_form  }}</label></p> 
         <div class="col-xs-12">
-         <input type="submit" class="btn btn-primary" value="Filter" name="category-filter-form">
+         <input type="submit" class="btn btn-primary" value="Show by Categories" name="category-filter-form">
          
         </div>
        </div>
@@ -76,7 +76,7 @@
 <div class="row justify-content-center">
     {% for product in products %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3 display panel panel-default">
-            <div class="panel-body">
+            <div class="panel-body" style="padding-top: 50px;">
                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
                 <h3>{{ product.name }}</h3>
@@ -110,12 +110,10 @@ function change() {
         document.getElementById("demo").innerHTML = "That went well";      
     }
 
+var hoverRatio = 1.2;
+
 </script>
-<script src="/path/to/jquery.min.js"></script>
 
-<script src="/path/to/jquery.ez-plus.js"></script>
 <!--<script src="{% static 'js/main.js' %}"></script>-->
-
-{% endblock %}
-
 </div>
+{% endblock %}

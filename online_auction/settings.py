@@ -99,10 +99,10 @@ WSGI_APPLICATION = 'online_auction.wsgi.application'
 #        }
 # }
 
-# if "DATABASE_URL" in os.environ:
-#     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
-# else:
-#     print("Database URL not found. Using SQLite instead")
+if "DATABASE_URL" in os.environ:
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+else:
+    print("Database URL not found. Using SQLite instead")
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
