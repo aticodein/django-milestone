@@ -1,1 +1,1 @@
-web: gunicorn django-milestone.wsgi:application
+web: gunicorn online_auction.wsgi.application
