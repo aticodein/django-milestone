@@ -19,6 +19,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bid',
             name='user_bid',
-            field=models.IntegerField(default=''),
+            field=models.IntegerField(default=1),
         ),
     ]

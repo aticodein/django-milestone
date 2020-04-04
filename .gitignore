@@ -4,3 +4,4 @@ static/
 media/
 *.png
 __pycache__
+*.pyc
