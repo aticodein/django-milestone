@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('GITPOD_HOSTNAME','localhost'), 'milestone-4-django-project.herokuapp']
+ALLOWED_HOSTS = [os.environ.get('GITPOD_HOSTNAME','localhost'), 'milestone-4-django-project.herokuapp.com']
 
 
 # Application definition
