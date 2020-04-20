@@ -1,8 +1,8 @@
 body {
     font-family: Arial;
     padding-top: 50px;
-    background-image: url("https://milestone-4-django-project.s3-eu-west-1.amazonaws.com/media/images/treasure.jpg");
-    background-color: #866c84;
+    background-image: url("https://milestone-4-django-project.s3-eu-west-1.amazonaws.com/media/images/blue+backgr.jpg");
+    background-color: antiquewhite;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
