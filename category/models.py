@@ -10,8 +10,7 @@ class Category(models.Model):
            ('TV', 'TV'),
            ('Projector', 'Projector'),
            ('PC', 'PC'),
-           ('Tablet', 'Tablet'),
-           ('Voodoo', 'Voodoo')
+           ('Tablet', 'Tablet')
        )  
     title = models.CharField(max_length=50, default='', choices=CATEGORIES)
     description = models.TextField()
