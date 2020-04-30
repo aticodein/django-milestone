@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<h1 style="margin: 30px">Items</h1>
+<h1 style="margin: 30px">SHOP ONLINE</h1>
 {% extends 'base.html' %}
 
 {% load static from staticfiles %}
@@ -8,39 +8,33 @@
 
 {% block content %}
 
-<div id="coding">
-<p  id="demo">A Paragraph.</p>
-</div>
-
-<button type="button" onclick="myFunction()">Try it</button>
-<button type="button" onclick="change()">Change</button>
-
-
-<div class="container">
+<div class="container-flex">
 
 <div class="row">
-<div class="col-xs-12 col-md-6">
-    <form method="POST">
-        <div class="form-row">
-            {% csrf_token %}
-            <div class="form-group col-md-4">
-                <a class="navbar-brand" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Precious</button></a>
-            </div>
-        </div>
-    </form>
-    </div>
 
-<div class="col-xs-12 col-md-6">
+<div class="col-xs-12 col-md-4">
     <form method="POST">
+      
       <div style="" class="form-row">
         {% csrf_token %}
-         <p> <label style="background-color:white;">{{  filter_categories_form  }}</label></p> 
-        <div class="col-xs-12">
          <input type="submit" class="btn btn-primary" value="Show by Categories" name="category-filter-form">
-         
-        </div>
+         <p> <label style="background-color:white; margin-left: 15px;">{{  filter_categories_form  }}</label></p> 
+        
        </div>
-
+       
+        
+         
+        
+    </form>
+    </div>
+<div class="col-xs-12 col-md-4">
+    <form method="POST">
+        <div class="form-row col-md-4">
+            {% csrf_token %}
+            <div class="form-group col-md-4">
+                <a class="navbar-brand" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Items</button></a>
+            </div>
+        </div>
     </form>
     </div>
 </div>    
@@ -100,6 +94,13 @@
         </div>
     {% endfor %}
 </div>
+
+<div id="coding">
+<p  id="demo">A Paragraph.</p>
+</div>
+
+<button type="button" onclick="myFunction()">Try it</button>
+<button type="button" onclick="change()">Change</button>
 
 <script>
 function myFunction() {

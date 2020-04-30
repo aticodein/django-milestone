@@ -4,12 +4,14 @@ from django.db import models
 
 class Category(models.Model):
     CATEGORIES = (
-           ('Magical', 'Magical'),
-           ('Historical', 'Historical'),
-           ('Voodoo', 'Voodoo'),
-           ('Christian', 'Christian'),
-           ('Asian', 'Asian'),
-           ('Ancient', 'Ancient')
+           ('Phone', 'Phone'),
+           ('Laptop', 'Laptop'),
+           ('Watch', 'Watch'),
+           ('TV', 'TV'),
+           ('Projector', 'Projector'),
+           ('PC', 'PC'),
+           ('Tablet', 'Tablet'),
+           ('Voodoo', 'Voodoo')
        )  
     title = models.CharField(max_length=50, default='', choices=CATEGORIES)
     description = models.TextField()
