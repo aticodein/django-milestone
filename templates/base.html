@@ -48,6 +48,7 @@
             </div>
         </div>
     </nav>
+    
     {% if messages %}
         <div class="alert alert-success" style="width: 282px; margin-left: 20px;" >
             <div class="messages">
@@ -57,6 +58,7 @@
             </div>
         </div>
     {% endif %}
+
    <div class="container"> 
        {% block content %} {% endblock %}  
     </div>
@@ -65,6 +67,5 @@
             <p>Made by Attila Szaloki Code Institute bootcampers</p>
         </div>
     </footer>
-     <!--<script src="{% static 'js/main.js' %}"></script>-->
 </body>
 </html>
