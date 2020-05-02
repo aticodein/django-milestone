@@ -19,7 +19,8 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     border-top: 1px solid #c0baba;
-    color: #A9A9A9;
+    color: darkslategrey;
+    background-color: #1d9ce5
 }
 
 .icon-bar {
@@ -96,4 +97,29 @@ caption p {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: blue;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: black;
 }

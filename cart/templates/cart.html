@@ -5,7 +5,11 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+
+<a class="navbar-brand" href="/"><button type="submit" style="margin: 1em;" class="btn btn-primary" name="back">Go back to shop</button></a>
 <div class="container" > <h3> You have  {{ product_count }} item in your shopping cart!</h3></div>
+ 
+<br>  
 <div class="row row-flex">
     {% for item in cart_items %}
     
