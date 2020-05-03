@@ -5,6 +5,7 @@
 
 <div class="col">
 <h3 style="margin: 30px; color: white;">Electronics</h3>
+<div class="container"> <h4 class="col-md-4" style="border: 1px solid white; padding: 2px 0px 0px 30px"> You have  {{ product_count }} item in your shopping cart!</h4></div>
     <div id="myCarousel" class="carousel slide col-md-7" data-ride="carousel" style="max-width: 900px; margin-left: 20px;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -76,7 +77,7 @@
 
 <div class="form-row">
   <div class="form-group col-md-6">
-      <label for="Category">Category</label>
+      <label for="Category">Our Categories</label>
       <select id="Category" class="form-control" name="category">
         <option selected>All Categories</option>
         {% for cat in categories %}

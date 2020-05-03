@@ -13,7 +13,7 @@
       <div style="" class="form-row">
         {% csrf_token %}
          <p><label style="background-color:white; margin-top: 10px; margin-left: 15px;">{{  filter_categories_form  }}</label></p>
-         <input type="submit" class="btn btn-primary" style="margin-top: 2px;" value="Show by Categories" name="category-filter-form"> 
+         <input type="submit" class="btn btn-primary" style="margin-top: 2px;" value="Sort by Title" name="category-filter-form"> 
        </div>  
     </form>
     </div>
@@ -22,7 +22,7 @@
         <div class="form-row col-md-4">
             {% csrf_token %}
             <div class="form-group col-md-4">
-                <a class="navbar-brand" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Items</button></a>
+                <a class="navbar-brand" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Products</button></a>
             </div>
         </div>
     </form>
@@ -90,19 +90,19 @@
 
 
 <div id="coding">
-<p  id="demo">A Paragraph.</p>
+<p  id="demo"></p>
 </div>
 
-<button type="button" onclick="myFunction()">Try it</button>
-<button type="button" onclick="change()">Change</button>
+<button type="button" onclick="myFunction()">Delivery Options</button>
+<button type="button" onclick="change()">Delivery Prices</button>
 
 <script>
 function myFunction() {
-  document.getElementById("demo").innerHTML = "Hellish";
+  document.getElementById("demo").innerHTML = "1-2 Day, Less one week, Two weeks";
 }
 
 function change() {
-        document.getElementById("demo").innerHTML = "That went well";      
+        document.getElementById("demo").innerHTML = "Extra: &euro;10, Extra: &euro;5, Free of charge";      
     }
 
 var hoverRatio = 1.2;
