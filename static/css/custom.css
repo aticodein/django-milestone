@@ -16,6 +16,10 @@ H1 {
     color:whitesmoke;
 }
 
+.ul {
+    list-style-type:none;
+}
+
 .icon-bar {
     background-color: #fff;
 }
