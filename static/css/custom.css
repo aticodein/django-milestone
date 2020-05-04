@@ -14,14 +14,6 @@ body {
 H1 {
     color:whitesmoke;
 }
-footer {
-    margin-top: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-top: 1px solid #c0baba;
-    color: darkslategrey;
-    background-color: #1d9ce5
-}
 
 .icon-bar {
     background-color: #fff;
@@ -37,6 +29,9 @@ footer {
     border-width: 0.2em;
     border-radius: 15px;
 }
+.navbar-default .navbar-brand:hover {
+    background-color: #999999;
+}
 
 .navbar-collaps {
     background-color: gray ;
@@ -48,7 +43,7 @@ footer {
 }
 
 .display {
-    margin: 30;
+    margin: 30px;
 }
 
 .badge {
@@ -97,6 +92,15 @@ caption p {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #c0baba;
+    color: darkslategrey;
+    background-color: #1d9ce5
 }
 
 .social-links {
