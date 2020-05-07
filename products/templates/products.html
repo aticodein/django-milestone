@@ -7,58 +7,87 @@
 
 {% block content %}
 
-<div class="row">
-<div class="col-md-4">
-    <form method="POST">  
-      <div style="" class="form-row">
-        {% csrf_token %}
-         <p><label style="background-color:white; margin-top: 10px; margin-left: 15px;">{{  filter_categories_form  }}</label></p>
-         <input type="submit" class="btn btn-primary" style="margin-top: 2px;" value="Sort by Title" name="category-filter-form"> 
-       </div>  
-    </form>
-    </div>
-<div class="col-md-4">
-    <form method="POST">
-        <div class="form-row col-md-4">
-            {% csrf_token %}
-            <div class="form-group col-md-4">
-                <a class="navbar-brand" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Products</button></a>
-            </div>
+<div id="coding">
+<p  id="demo"></p>
+</div>
+
+<button type="button" onclick="myFunction()">Delivery Options</button>
+<button type="button" onclick="change()">Delivery Prices</button>
+
+<main>
+ <div class="2nav navbar" style="margin-top: 7px; max-width: 1400px; border: solid 1px white" >
+     <div class="">
+        <form method="POST">  
+         <div style="" class="col-md-4">
+           {% csrf_token %}
+           <p><label style="background-color:white; margin-top: 10px; margin-left: 15px;">{{  filter_categories_form  }}</label></p>
+            
+         </div> 
+         <div class="col-md-4"> 
+         <input type="submit" class="btn btn-primary" style="margin-top: 2px;" value="Sort by Category" name="category-filter-form">
+         </div> 
+        </form>
         </div>
-    </form>
+        <div class="col-md-4">
+        <form method="POST">
+          
+              {% csrf_token %}
+              <div class="form">
+                <a class="" href="/"><button type="submit" class="btn btn-primary" name="back">Show all Products</button></a>
+              
+           </div>
+        </form>
+        </div>
     </div>
-</div>
+  <div class="container">
+    <div class="row">
+      <aside class="hidden-xs col-md-2">
+       
+    
+        <div class="site-nav navbar" style="margin-top: 7px; max-width: 1400px; border: solid 1px white" >
+     <div class="row"> 
 
-
-<div class="container"> 
-
-{% if products.has_other_pages %}
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-   {% if products.has_previous %}
-    <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}">Previous</a></li>
-   {% else %}
-    <li class="disabled"><span>Previous</span></li>
-   {% endif %} 
-   {% for i in products.paginator.page_range %}
-      {% if products.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if products.has_next %}
-     <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}">Next</a></li>
-    {% else %}
-     <li class="disabled"><span>Next</span></li>
-    {% endif %}
-  </ul>
-</nav>
-{% endif %} 
-
-</div>
-<div class="container">
-<div class="row justify-content-center">
+       <li class="dropdown col-md-10" style="margin-left: 25px; padding-top: 40px; "><a href="#" class="dropdown-toggle" style="text-align: center; color: white;" data-toggle="dropdown">Sporting Goods <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Swimmo watch</a></li>
+          <li><a href="#">Huawei Smart watch</a></li>
+          <li><a href="#">Apple watch</a></li>
+        </ul>
+      </li>
+      <li class="dropdown col-md-10" style="margin-left: 25px; padding-top: 40px; "><a href="#" class="dropdown-toggle" style="text-align: center; color: white;" data-toggle="dropdown">Category Titles <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Phone</a></li>
+          <li><a href="#">Laptop</a></li>
+          <li><a href="#">Watc</a></li>
+          <li><a href="#">TV</a></li>
+          <li><a href="#">Projector</a></li>
+          <li><a href="#">PC</a></li>
+          <li><a href="#">Tablet</a></li>
+        </ul>
+      </li>
+      <li class="dropdown col-md-10" style="margin-left: 25px; padding-top: 40px; "><a href="#" class="dropdown-toggle" style="text-align: center; color: white;" data-toggle="dropdown">Daily Deal <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">ThundeaL Mini Projector for &euro;80</a></li>
+        </ul>
+      </li>
+      <li class="dropdown col-md-10" style="margin-left: 25px; padding-top: 40px; "><a href="#" class="dropdown-toggle" style="text-align: center; color: white;" data-toggle="dropdown">Best Sellers <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Lenovo</a></li>
+          <li><a href="#">Dell</a></li>
+          <li><a href="#">Acer</a></li>
+        </ul>
+      </li>
+      <li class="dropdown col-md-10" style="margin-left: 25px; padding-top: 40px; padding-bottom: 40px; "><a href="#" class="dropdown-toggle" style="text-align: center; color: white;" data-toggle="dropdown">Help & Contact <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Email: electromall@gmail.com</a></li>
+          <li><a href="#">Phone: +999 25 589 456</a></li>
+        </ul>
+      </li>
+     </div>
+    </div>
+      </aside>
+      <div class="content col-sm-10">
+        <div class="row justify-content-center">
     {% for product in products %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3 display panel panel-default">
             <div class="panel-body" style="padding-top: 50px;">
@@ -87,14 +116,37 @@
     {% endfor %}
 
 </div>
+<div class="container"> 
 
+{% if products.has_other_pages %}
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+   {% if products.has_previous %}
+    <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}">Previous</a></li>
+   {% else %}
+    <li class="disabled"><span>Previous</span></li>
+   {% endif %} 
+   {% for i in products.paginator.page_range %}
+      {% if products.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if products.has_next %}
+     <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}">Next</a></li>
+    {% else %}
+     <li class="disabled"><span>Next</span></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %} 
 
-<div id="coding">
-<p  id="demo"></p>
 </div>
-
-<button type="button" onclick="myFunction()">Delivery Options</button>
-<button type="button" onclick="change()">Delivery Prices</button>
+      </div>
+    </div>
+  </div>
+</main> 
 
 <script>
 function myFunction() {
@@ -107,8 +159,6 @@ function change() {
 
 var hoverRatio = 1.2;
 
-</script>
-
-</div>
+</script>    
 
 {% endblock %}
