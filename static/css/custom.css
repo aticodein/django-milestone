@@ -20,6 +20,10 @@ ul {
     list-style-type:none;
 }
 
+select {
+   background-color: #55a8f0;
+}
+
 .icon-bar {
     background-color: #fff;
 }
