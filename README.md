@@ -1,21 +1,17 @@
-# django-milestone
+# Fuulstack Django-milestone project
 [![Build Status](https://travis-ci.org/aticodein/django-milestone.svg?branch=master)](https://travis-ci.org/aticodein/django-milestone)
 Django online store
+Frequently used shortcuts on gitpod:
 alias run='python3 manage.py runserver'
 alias col='python3 manage.py collectstatic'
 alias mak='python3 manage.py makemigrations'
 alias mig='python3 manage.py migrate'
 
 
-Foobar is a Python library for dealing with word pluralization.
+## Project purpose 
 
-## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+ [Heroku Link to the application](https://milestone-4-django-project.herokuapp.com/)
 
 ## Usage
 

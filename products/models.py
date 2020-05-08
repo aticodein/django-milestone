@@ -12,8 +12,6 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=9, decimal_places=2)
     image = models.ImageField(upload_to='images')
     startingBidPrice = models.DecimalField(max_digits=9, decimal_places=2)
-    # highestBidPrice = models.DecimalField(max_digits=9, decimal_places=2)
-    # currentBidPrice =  models.DecimalField(max_digits=9, decimal_places=2)
     auctionEndDate = models.DateTimeField(auto_now_add=False, auto_now=False, blank=True)
 
     def __str__(self):
