@@ -76,16 +76,12 @@ automaticly tested by this service.
 I have used google developer tool to inspect my website many times, not only for checking the responsiveness 
 in different devices but the error messages in console.
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Friends and family tested the deployed version for me all links are clickable and menubar item working at all kind of devices.
+However I have to used google more tools for clearing browsing data for checking all my CSS changes working.
+This is the reason for some of inline style coding in HTML, but some are necessary for getting other styling at particular 
+HTML item.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 
 
