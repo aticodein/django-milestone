@@ -12,7 +12,7 @@ alias mig='python3 manage.py migrate'
 
 This project is an online webshop for electronics. 
 Selected products held in shopping cart for one session.
-Login, logout authentication for shopping with stripe patments.
+Login, logout authentication for shopping with stripe payments.
 
 
  [Heroku Link to the application](https://milestone-4-django-project.herokuapp.com),
@@ -20,22 +20,52 @@ Login, logout authentication for shopping with stripe patments.
 
 ## UX
 
-```
 A very simple presentation of a working webshop, easily attached to a technichal blog for introduce new products to readers.
 Its simplicity good for around 50 items easily browsing with category and pagination.
 
 A blog reader when got some new information about a new released electronic product on the market,
-usually have to go to an othr website to buy that product. Lints to that website probably working with affiliate systems.
+usually have to go to an other website to buy that product. Links to that website probably working with affiliate systems.
 
 The blog owner with this application of the blog website, can sell products without go to other online webshop.
 
-```
+## Features
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Landing page with slider, link for products and menubar. Very short visual representation of the products.
+Next is the product page all item with pagination, below main menubar a category shearch option and a back to all items button.
+Site bar for a few other kind of group and information to represent. 
+Below products delivery information and footer with social media links.
+The main menubar have the registration page link, login and shopping cart link. After registration
+user can login and registration part of the menu change to a profile link and login turns a logout of course.
 
-Please make sure to update tests as appropriate.
+### Existing Features
 
-## License
+Logged in or out warning sign.
+Product panel has information for products from database.
+Number of items can put in shopping cart after login.
+Adjust products quantity at shopping cart and go to checkout.
+Shopping via Stripe.
+
+
+### Features Left to Implement
+
+Site bar links to suggested groups or information.
+Detailed and bigger product panel.
+Auction page for certain product with a bidding system.
+
+## Technologies Used
+
+This project uses HTML, CSS, JavaScript and Python computer languages.
+JQuery, Bootstrap, Django frameworks. 
+SQLite and AWS databases.
+Gitpod for developing, Github repositories for store code and Heroku deployment.
+
+- AWS buckets stores data for Heroku
+- Django with Python
+  - Back-end framework very useful inbuilt fetures specially Admin site.
+- Gitpod cloud developing
+  - Found easy to use   
+
+
+
 
 
