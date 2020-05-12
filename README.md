@@ -65,7 +65,27 @@ Gitpod for developing, Github repositories for store code and Heroku deployment.
 - Gitpod cloud developing
   - Found easy to use   
 
+## Testing
 
+During developing I have the debug function on (true) at online_auction.settings.py in Django app
+so when I run the application it show immediately some of the problems.
+
+Later I have set up [Travis](https://travis-ci.org/github/aticodein/django-milestone), all my github push was 
+automaticly tested by this service.
+
+I have used google developer tool to inspect my website many times, not only for checking the responsiveness 
+in different devices but the error messages in console.
+
+Contact form:
+Go to the "Contact Us" page
+Try to submit the empty form and verify that an error message about the required fields appears
+Try to submit the form with an invalid email address and verify that a relevant error message appears
+Try to submit the form with all inputs valid and verify that a success message appears.
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 
 
