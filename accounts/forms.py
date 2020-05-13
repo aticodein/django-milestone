@@ -9,7 +9,7 @@ from products.models import Product
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['name', 'category', 'price', 'auctionEndDate']
+        fields = ['name', 'category', 'price', 'auctionEndDate', 'description', 'startingBidPrice']
 
 
 class UserLoginForm(forms.Form):
