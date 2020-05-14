@@ -12,10 +12,11 @@
 <div class="container" > <h3> You have  {{ product_count }} item in your shopping cart!</h3></div>
  
 <br>  
-<div class="row row-flex">
+<div class="container-flex">
+<div class="row" style="display: flex; flex-wrap: wrap;" >
     {% for item in cart_items %}
     
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display" style="margin:3px;">
+    <div class=" col-md-3 display panel panel-display" style="padding-top: 50px;">
         
         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
 
@@ -43,6 +44,7 @@
         </div>
     </div>
     {% endfor %}
+</div>
 </div>
 <div class="row">
     <p>Total</p>

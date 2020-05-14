@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    max-width: 1420px;
+    max-width: 100%;
 
 }
 
@@ -105,11 +105,10 @@ select {
     background-repeat: no-repeat;
     width: 200px;
     height: 180px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .panel-default {
-    margin: 2px;
     padding: 5px;
 }
 

@@ -82,6 +82,10 @@ This is the reason for some of inline style coding in HTML, but some are necessa
 HTML item.
 
 
+## Deployment
+
+
+thi (https://milestone-4-django-project.herokuapp.com/)
 
 
 
