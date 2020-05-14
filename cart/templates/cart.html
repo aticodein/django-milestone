@@ -4,7 +4,7 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-<h1>Shopping Cart</h1> <h4>Go to  payment with Checkout below</h4>
+<h1 style="margin-top: 60px;">Shopping Cart</h1> <h4>Go to  payment with Checkout below</h4>
 
 <!---------------------------------------product in cart count display------------------------------------------------->
 
@@ -13,7 +13,7 @@
  
 <br>  
 <div class="container-flex">
-<div class="row" style="display: flex; flex-wrap: wrap;" >
+<div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;" >
     {% for item in cart_items %}
     
     <div class=" col-md-3 display panel panel-display" style="padding-top: 50px;">

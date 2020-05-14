@@ -49,14 +49,6 @@ select {
     background-color: gray ;
 }
 
-.navbar-brand:hover {
-    background-color: #999999;
-}
-
-.navbar-brand:focus {
-    background-color: #999999;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
