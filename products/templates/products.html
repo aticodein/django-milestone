@@ -9,23 +9,30 @@
 
 <main>
 
-<div class="2nav navbar" style="margin-top: 60px; max-width: 100%; border: solid 1px white">
-    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
-         <div class="form">
-         <form method="POST"> 
+<div class="2nav navbar" style="margin-top: 60px; max-width: 100%; border: solid 1px white" >
+     <div class="">
+        <form method="POST">  
+         <div style="" class="col-md-4">
            {% csrf_token %}
-            <div><p class="btn btn-primary" style="margin-top: 8px; margin-bottom: 8px;">{{  filter_categories_form  }}</p></div>
-            <div><input type="submit" class="btn btn-primary" style="margin-top: 8px;" value="Sort by Category" name="category-filter-form"></div>
-         </form>
-         </div>
-        <div class="form">
-         <form method="POST">
-          {% csrf_token %} 
-            <a class="" href="/"><button type="submit" class="btn btn-primary" style="margin-top: 8px;" name="back">Show all Products</button></a> 
-         </form>
+           <div><p class="btn btn-primary" style="margin-top: 8px; margin-bottom: 8px;">{{  filter_categories_form  }}</p></div>
+            
+         </div> 
+         <div class="col-md-4"> 
+         <input type="submit" class="btn btn-primary" style="margin-top: 8px;" value="Sort by Category" name="category-filter-form">
+         </div> 
+        </form>
         </div>
-    </div>
-</div>  
+        <div class="col-md-4">
+        <form method="POST">
+          
+              {% csrf_token %}
+              <div class="form">
+                <a class="" href="/"><button type="submit" class="btn btn-primary" style="margin-top: 8px;" name="back">Show all Products</button></a>
+              
+           </div>
+        </form>
+        </div>
+    </div>  
 
 <div class="container-flex">
     <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
