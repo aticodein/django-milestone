@@ -107,6 +107,9 @@ I have folloewd this processduring deployment:
   - I have used an " if else " statement between AWS and SQLite 
   - Important to use "collectstatic" command after static file changes to find these at AWS database
 
+### Differences
+Database contet different in Gitpod to Heroku, Heroku uses AWS buckets for images and products details.  
+
 ## Credits
 
 ### Media and Content

@@ -10,18 +10,23 @@
 <main>
 
 <div class="2nav navbar" style="margin-top: 60px; max-width: 100%; border: solid 1px white" >
-     <div class="">
-        <form method="POST">  
-         <div style="" class="col-md-4">
+    <div>
+        <form method="POST">
+
+        <div class="col-md-4">
            {% csrf_token %}
-           <div><p class="btn btn-primary" style="margin-top: 8px; margin-bottom: 8px;">{{  filter_categories_form  }}</p></div>
-            
-         </div> 
-         <div class="col-md-4"> 
-         <input type="submit" class="btn btn-primary" style="margin-top: 8px;" value="Sort by Category" name="category-filter-form">
-         </div> 
-        </form>
+            <div>
+             <p class="btn btn-primary" style="margin-top: 8px; margin-bottom: 8px;">{{  filter_categories_form  }}</p>
+            </div>   
         </div>
+
+        <div class="col-md-4"> 
+           <input type="submit" class="btn btn-primary" style="margin-top: 8px;" value="Sort by Category" name="category-filter-form">
+        </div>
+
+        </form>
+    </div>
+
         <div class="col-md-4">
         <form method="POST">
           
