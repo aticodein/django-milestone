@@ -85,7 +85,29 @@ HTML item.
 ## Deployment
 
 
-thi (https://milestone-4-django-project.herokuapp.com/)
+This project was deployed at [Heroku](https://milestone-4-django-project.herokuapp.com/)
 
+I have folloewd this processduring deployment:
 
+- Create new Heroku app at [Heroku/Home](https://www.heroku.com/home)
+- The app name must be all lowercase caracter no space only dash can be used.
+- Heroku uses Postgres database, so first I did add-on with free option
+  - at setting Config Vars: the SECTRET_KEY and DATABASE_URL must be set for every project.
+-in developer terminal with pip must be installed psycopg2
+  - this for the Heroku database connection 
+   `Pip freeze > requirements.txt`
+- Then in settings.py I have database:
+ `DATABASE = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}`
+- And the location for files:
+ `STATICFILES_LOCATION = 'static'`
+ `STATICFILES_STORAGE = 'custom_storages.StaticStorage'`
 
+ `STATIC_URL = '/static/'`
+ `STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)`
+- Have to create a Procfile and install gunicorn
+- In settings.py Heroku should be at allowed host: 
+  - ALLOWED_HOSTS = [os.environ.get('GITPOD_HOSTNAME','localhost'), 'milestone-4-django-project.herokuapp.com']
+- For database changhe during development:
+  - I have used an " if else " statement between AWS and SQLite 
+  - Important to use "collectstatic" command after static file changes to find these at AWS database
+  

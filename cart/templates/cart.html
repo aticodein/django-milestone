@@ -4,6 +4,8 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+
+<main>
 <h1 style="margin-top: 60px;">Shopping Cart</h1> <h4>Go to  payment with Checkout below</h4>
 
 <!---------------------------------------product in cart count display------------------------------------------------->
@@ -51,5 +53,6 @@
     <h4><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><strong> {{ total }}</strong></h4>
     <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
 </div>
+</main>
 
 {% endblock %}
