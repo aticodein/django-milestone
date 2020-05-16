@@ -1,12 +1,12 @@
+
 # Fullstack Django-milestone project
 [![Build Status](https://travis-ci.org/aticodein/django-milestone.svg?branch=master)](https://travis-ci.org/aticodein/django-milestone)
-Django online store
+
 Frequently used shortcuts on gitpod:
 alias run='python3 manage.py runserver'
 alias col='python3 manage.py collectstatic'
 alias mak='python3 manage.py makemigrations'
 alias mig='python3 manage.py migrate'
-
 
 ## Project 
 
@@ -45,7 +45,6 @@ Number of items can put in shopping cart after login.
 Adjust products quantity at shopping cart and go to checkout.
 Shopping via Stripe.
 
-
 ### Features Left to Implement
 
 Site bar links to suggested groups or information.
@@ -81,9 +80,7 @@ However I have to used google more tools for clearing browsing data for checking
 This is the reason for some of inline style coding in HTML, but some are necessary for getting other styling at particular 
 HTML item.
 
-
 ## Deployment
-
 
 This project was deployed at [Heroku](https://milestone-4-django-project.herokuapp.com/)
 
@@ -93,7 +90,7 @@ I have folloewd this processduring deployment:
 - The app name must be all lowercase caracter no space only dash can be used.
 - Heroku uses Postgres database, so first I did add-on with free option
   - at setting Config Vars: the SECTRET_KEY and DATABASE_URL must be set for every project.
--in developer terminal with pip must be installed psycopg2
+  - in developer terminal with pip must be installed psycopg2
   - this for the Heroku database connection 
    `Pip freeze > requirements.txt`
 - Then in settings.py I have database:
@@ -101,13 +98,28 @@ I have folloewd this processduring deployment:
 - And the location for files:
  `STATICFILES_LOCATION = 'static'`
  `STATICFILES_STORAGE = 'custom_storages.StaticStorage'`
-
  `STATIC_URL = '/static/'`
  `STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)`
 - Have to create a Procfile and install gunicorn
-- In settings.py Heroku should be at allowed host: 
+- In settings.py Heroku should be at allowed host with Heroku project name: 
   - ALLOWED_HOSTS = [os.environ.get('GITPOD_HOSTNAME','localhost'), 'milestone-4-django-project.herokuapp.com']
 - For database changhe during development:
   - I have used an " if else " statement between AWS and SQLite 
   - Important to use "collectstatic" command after static file changes to find these at AWS database
-  
+
+## Credits
+
+### Media and Content
+
+The photos and text for products used in this site were obtained from [Buyitdirect](https://www.buyitdirect.ie/),
+[eBay](https://www.ebay.ie/)
+
+### Acknowledgements
+
+Thanks to Ali Ashik, my mentor at Code Institute for support and the useful knowledge and ideas.
+My second mentor during this project was Aaron Sinnott who helped to finalise.
+
+When I got stuck tutor support helped me many times with quick answers to my questions.
+Great support throughout the course with mentors, tutors, leads and friends at Slack!
+
+THANK YOU!  
