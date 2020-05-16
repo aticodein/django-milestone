@@ -2,16 +2,20 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
-<div class="row">
+<div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
 <div class="container-flex"> 
-  <h4 class="col-md-6" style=" color: blue; border: 1px solid white; padding: 2px 0px 0px 30px"> You have  {{ product_count }} item in your shopping cart! <a style="color: blue;" href="{% url 'products' %}"> Go shopping >>> </a></h4>
+  <h4 class="col-md-12" style=" color: blue; border: 1px solid white; padding: 2px 30px 0px 30px"> This website is a presentation for Code Institute final project and study purposes ONLY! </h4>
+</div>
+</div>
+<div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
+<div class="container-flex"> 
+  <h4 class="col-md-12" style=" color: blue; border: 1px solid white; padding: 2px 30px 0px 30px"> You have  {{ product_count }} item in your shopping cart! <a style="color: blue;" href="{% url 'products' %}"> Go shopping >>> </a></h4>
 </div>
 </div>
 
-<div class="col">
+<div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
 
-    <div id="myCarousel" class="carousel slide col-md-12" data-ride="carousel" style="max-width: 880px; margin-left: 100px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-width: 880px;">
     <!------------------------------------- Indicators ---------------------------------------->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
